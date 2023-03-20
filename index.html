@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Fyzika — teplo</title>
 </head>
 <body>
@@ -13,10 +14,10 @@
 
 <h2>... aneb procvičujeme <span style="color: #ffa621">fyziku</span></h2>
 
-<h3>Slovo úvodem</h3>
+<h3>Pár slov na vysvětlenou</h3>
 
 <p>Milý studente, milá studentko,<br>
-    víme, že studium fyziky umí být občas dřina, ale taková, co se vyplatí! <br>
+    víme, že studium fyziky umí být občas dřina. Věříme ale, že taková, co se vyplatí. <br>
 </p>
 <p>
 Děsí i Tebe pohled na následující vzoreček?
@@ -28,12 +29,25 @@ Děsí i Tebe pohled na následující vzoreček?
     Koho ne, že? Všechna ta řecká písmena, konstanty...
 </p>
 <p>
-    Přitom jde o jednoduchý popis toho, jak teplo projde konkrétním materiálem o konkréní měrné tepelné kapacitě, ploše, tloušce, rozdílu teplot prostředích, ve kterých se materiál nachází a doby, za kterou průchod tepla měříme.
+    Přitom jde o jednoduchý popis toho, jak teplo projde konkrétním materiálem o konkréní ploše, tloušce, rozdílu teplot prostředích, ve kterých se materiál nachází a doby, za kterou průchod tepla měříme.
 </p>
 <p>Pořád nemáš jasno? Mrkni do nápovědy (<a href="help.html">HELP</a>), nebo dej na metodu „pokus, omyl“ a zkus do vzorce dosadit některé hodnoty... </p>
 
-<p> <img src="images/lambda.png" height="24pt"> je <span style="color: #ffa621">součinitel tepelné vodivosti</span>. Jde o experimentálně určenou konstantu, která udává, jak daný materiál vede teplo. <input type="number" id="lambda"></p>
+<p> <img src="images/lambda.png" height="20pt"> je <span style="color: #ffa621">součinitel tepelné vodivosti</span>. Jde o experimentálně určenou konstantu, která udává, jak daný materiál vede teplo. Zkus zapátrat na internetu a napiš součinitel tepelné vodivosti pro vybraný materiál: <br> <input type="number" id="lambda"></p>
 
+<p><img src="images/obsah.png" height="18pt"> je <span style="color: #ffa621">plocha</span> (obsah) přes kterou může počítané teplo unikat. Zvol si zkušební hodnotu plochy materiálu, který počítáš: <br> <input type="number" id="plocha">m²</p>
+
+<p><img src="images/deltaT.png" height="16pt"> je <span style="color: #ffa621">rozdíl teplot</span> dvou prostředí, které materiál odděluje. Zvol si tuto hodnotu (ve stupních Celsia nebo Kelvinech): <br> <input type="number" id="deltaT">°C</p>
+
+<p><img src="images/delka.png" height="18pt"> je <span style="color: #ffa621">tloušťka materiálu</span> oddělující prostředí o různých teplotách. Zvol si také tloušťku materiálu: <br> <input type="number" id="delka">m</p>
+
+<p><img src="images/tau.png" height="18pt"> je <span style="color: #ffa621">doba</span>, po kterou materiál vystavujeme rozdílu teplot. Zvol si časový interval v sekundách: <br> <input type="number" id="cas">s</p>
+
+<br>
+
+<button onclick="vypocet()">VYPOČÍTEJ</button> <br>
+
+<h3 style="text-align: center";>Teplo, které projde Tvým zvoleným materiálem je <br> Q = <span id="vysledek">tvuj_vysledek</span> J.</h3> 
 
 </body>
 </html>
