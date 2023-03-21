@@ -10,44 +10,61 @@
 </head>
 <body>
 
-<h1>Výpočet <span style="color: #ffa621">tepla</span> předaného vedením</h1>
 
-<h2>... aneb procvičujeme <span style="color: #ffa621">fyziku</span></h2>
+    
+    <h1>Výpočet <span style="color: #ffa621">tepla</span> předaného vedením</h1>
+    
+    <h2>... aneb procvičujeme <span style="color: #ffa621">fyziku</span></h2>
 
-<h3>Pár slov na vysvětlenou</h3>
 
-<p>Milý studente, milá studentko,<br>
-    víme, že studium fyziky umí být občas dřina. Věříme ale, že taková, co se vyplatí. <br>
-</p>
-<p>
-Děsí i Tebe pohled na následující vzoreček?
-</p>
+<p>Vítej na stránce, která je domovem <span style="color: #ffa621">Krutinova automatického počtáře</span> — nástroje, který Ti pomůže s výpočtem fyzikálního příkladu o <span style="color: #ffa621">prostupu tepla předaného vedením</span>. Ten počítáme pomocí následujícího vzorce:</p>
 
-<p style="text-align: center;"><img src="images/equation.png" width="20%"></p>
+<p style="text-align: center;"><img src="images/equation.png" width="15%"></p>
 
-<p>
-    Koho ne, že? Všechna ta řecká písmena, konstanty...
-</p>
-<p>
-    Přitom jde o jednoduchý popis toho, jak teplo projde konkrétním materiálem o konkréní ploše, tloušce, rozdílu teplot prostředích, ve kterých se materiál nachází a doby, za kterou průchod tepla měříme.
-</p>
-<p>Pořád nemáš jasno? Mrkni do nápovědy (<a href="help.html">HELP</a>), nebo dej na metodu „pokus, omyl“ a zkus do vzorce dosadit některé hodnoty... </p>
+<p>Jde Ti z něj hlava kolem? Začni čtením <a href="help.html">Studentské nápovědy</a>.</p>
 
-<p> <img src="images/lambda.png" height="20pt"> je <span style="color: #ffa621">součinitel tepelné vodivosti</span>. Jde o experimentálně určenou konstantu, která udává, jak daný materiál vede teplo. Zkus zapátrat na internetu a napiš součinitel tepelné vodivosti pro vybraný materiál: <br> <input type="number" id="lambda"></p>
 
-<p><img src="images/obsah.png" height="18pt"> je <span style="color: #ffa621">plocha</span> (obsah) přes kterou může počítané teplo unikat. Zvol si zkušební hodnotu plochy materiálu, který počítáš: <br> <input type="number" id="plocha">m²</p>
+<div id="dashed">
+<div id="center">
 
-<p><img src="images/deltaT.png" height="16pt"> je <span style="color: #ffa621">rozdíl teplot</span> dvou prostředí, které materiál odděluje. Zvol si tuto hodnotu (ve stupních Celsia nebo Kelvinech): <br> <input type="number" id="deltaT">°C</p>
 
-<p><img src="images/delka.png" height="18pt"> je <span style="color: #ffa621">tloušťka materiálu</span> oddělující prostředí o různých teplotách. Zvol si také tloušťku materiálu: <br> <input type="number" id="delka">m</p>
+<h3 style="font-size: 20pt;">K.A.P.<br>(Krutinův automatický počtář)</h3><img src="images/robot.svg" height="100pt">
+<hr>
 
-<p><img src="images/tau.png" height="18pt"> je <span style="color: #ffa621">doba</span>, po kterou materiál vystavujeme rozdílu teplot. Zvol si časový interval v sekundách: <br> <input type="number" id="cas">s</p>
 
-<br>
+<p>Vyber materiál:</p>
 
-<button onclick="vypocet()">VYPOČÍTEJ</button> <br>
+<select name="materialy" id="materialy">
+  <option value="0.5">cihla</option>
+  <option value="0.16">polystyren</option>
+  <option value="0.048">dřevo</option>
+  <option value="1">sklo</option>
+</select>
 
-<h3 style="text-align: center";>Teplo, které projde Tvým zvoleným materiálem je <br> Q = <span id="vysledek">tvuj_vysledek</span> J.</h3> 
+<p>Zadej plochy materiálu:</p>
+<input type="number" id="plocha"> m²
+<p>Zadej rozdíl teplot:</p>
+<input type="number" id="deltaT"> °C
+<p>Zadej tloušťku materiálu</p>
+<input type="number" id="delka"> m
+<p>Zadej dobu (čas), za kterou proniká teplo materiálem:</p>
+<input type="number" id="cas"> s
+
+<br><br>
+
+<p> <b> Nejprve zkus příklad spočítat sám a zadej svůj výsledek: </b></p>
+<input type="number" id="sVysledek">
+
+<hr>
+
+<button onclick="kap()">Spustit K.A.P.</button> <br>
+
+<h3 style="color: #ffa621;" id="hodnoceni"></h3>
+
+<br><br>
+
+</div>
+</div>
 
 </body>
 </html>

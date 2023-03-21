@@ -1,11 +1,31 @@
-let lambda = document.getElementById("lambda");
-let plocha = document.getElementById("plocha");
-let deltaT = document.getElementById("deltaT");
-let delka = document.getElementById("delka");
-let cas = document.getElementById("cas");
+function kap() {
+    let lambda =  document.getElementById("materialy").value;
+    let plocha = document.getElementById("plocha").value;
+    let deltaT = document.getElementById("deltaT").value;
+    let delka = document.getElementById("delka").value;
+    let cas = document.getElementById("cas").value;
 
-function vypocet() {
+    let sVysledek = document.getElementById("sVysledek").value
+
     let vysledek = lambda * ((plocha * deltaT * cas)/delka)
     console.log(vysledek)
-    document.getElementById("vysledek").innerText = vysledek;
+
+    if (vysledek == sVysledek) {
+        document.getElementById("hodnoceni").innerText = "Skvěle! Q = " + vysledek + " J je správný výsledek."
+    } else {
+        document.getElementById("hodnoceni").innerText = "Ne ne, tohle není správná odpověď. Měl(a) ses dobrat k výsledku Q = " + vysledek + " J."
+    }
+}
+
+function vypocet() {
+    let lambda =  document.getElementById("lambda").value;
+    let plocha = document.getElementById("plocha").value;
+    let deltaT = document.getElementById("deltaT").value;
+    let delka = document.getElementById("delka").value;
+    let cas = document.getElementById("cas").value;
+
+    let vysledek2 = lambda * ((plocha * deltaT * cas)/delka)
+    console.log(vysledek2)
+
+    document.getElementById("vysledek").innerText = vysledek2
 }

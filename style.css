@@ -3,11 +3,22 @@ body {
     margin-right: 15%;
     margin-left: 15%;
     margin-bottom: 5%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 p {
     font-family: 'Courier New', Courier, monospace;
     color: #464645;
+}
+
+#dashed {
+    border-style: dashed;
+    border-color: #FFD500;
+}
+
+#bigger {
+    font-size: large;
+    text-align: center;
 }
 
 h1, h2 {
@@ -22,5 +33,19 @@ h3 {
 }
 
 a {
-    color: #FFD500;
+    color:#ffa621;
+}
+
+#vysledek {
+    color: #ffa621;
+    font-size: 16pt;
+}
+
+#zaver {
+    color: #464645;
+    font-size: 14pt;
+}
+
+#center {
+    text-align: center;
 }
