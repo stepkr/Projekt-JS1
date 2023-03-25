@@ -10,10 +10,22 @@ function kap() {
     let vysledek = lambda * ((plocha * deltaT * cas)/delka)
     console.log(vysledek)
 
-    if (vysledek == sVysledek) {
+    let chce = document.getElementById("checkbox").value
+    console.log(chce)
+
+    if (chce == "on") {
+
+         if (vysledek == sVysledek) {
         document.getElementById("hodnoceni").innerText = "Skvěle! Q = " + vysledek + " J je správný výsledek."
-    } else {
+        } else {
         document.getElementById("hodnoceni").innerText = "Ne ne, tohle není správná odpověď. Měl(a) ses dobrat k výsledku Q = " + vysledek + " J."
+        }
+    } else {
+        if (vysledek == sVysledek) {
+            document.getElementById("hodnoceni").innerText = "Skvěle! Tvá odpověď je správná. Můžeš procvičovat dál s jinými hodnotami."
+        } else {
+        document.getElementById("hodnoceni").innerText = "Ne ne, tohle není správná odpověď. Zkus to znovu."
+        }
     }
 }
 
