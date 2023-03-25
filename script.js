@@ -10,11 +10,7 @@ function kap() {
     let vysledek = lambda * ((plocha * deltaT * cas)/delka)
     console.log(vysledek)
 
-    let chce = document.getElementById("checkbox").value
-    console.log(chce)
-
-    if (chce == "on") {
-
+    if (checkbox.checked) {
          if (vysledek == sVysledek) {
         document.getElementById("hodnoceni").innerText = "Skvěle! Q = " + vysledek + " J je správný výsledek."
         } else {
