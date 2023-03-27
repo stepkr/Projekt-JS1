@@ -43,9 +43,13 @@ a {
 
 #zaver {
     color: #464645;
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 #center {
     text-align: center;
+}
+
+#odkaz {
+    font-size: 16pt;
 }

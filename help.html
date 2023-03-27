@@ -11,10 +11,12 @@
 <body>
     <h1>Studentská <span style="color: #ffa621">HELP</span></h1>
     
-    <h2>... pro ty, co procvičují <span style="color: #ffa621">fyziku</span></h2>
+    <h2>... pro ty, kteří procvičují <span style="color: #ffa621">fyziku</span></h2>
+
+    <p id="odkaz"><a href="index.html">K.A.P</a></p>
     
 <p>Milý studente, milá studentko,<br>
-    víme, že studium fyziky umí být občas dřina. Věříme ale, že taková, co se vyplatí. <br>
+    víme, že studium fyziky umí být občas dřina. Věříme ale, že taková, co se vyplatí! <br>
 </p>
 <p>
 Děsí i Tebe pohled na následující vzoreček?
@@ -26,30 +28,39 @@ Děsí i Tebe pohled na následující vzoreček?
     Koho ne, že? Všechna ta řecká písmena, konstanty...
 </p>
 <p>
-    Přitom jde o jednoduchý popis toho, jak teplo projde konkrétním materiálem o konkréní ploše, tloušce, rozdílu teplot prostředí, ve kterých se materiál nachází a doby, za kterou průchod tepla měříme.
+    Přitom jde o jednoduchý popis toho, jak teplo projde určitým materiálem o konkréní ploše, tloušce, rozdílu teplot prostředí, ve kterých se materiál nachází a doby, za kterou průchod tepla měříme.
 </p>
 
-<p>Tento výpočet se často využívá ve stavebnictví, například při posuzování energetické náročnosti budovy, je tak velmi technicky významný a určitě se hodí mít o něm povědomí!</p>
+<p>Podívej se na obrázek a projdi si jednotlivé proměnné podrobněji. (Můžeš do nich zkusti dosadit vlastní hodnoty, ať vidíš, jak se vzorec chová.)</p>
 
-<p>Pojďme si projít jednotlivé proměnné podrobněji. (Můžeš do nich zkusti dosadit vlastní hodnoty, ať vidíš, jak se vzorec chová.)</p>
+<p style="text-align: center;"><img src="images/prostupTepla.png" width="50%"></p>
 
-<p> <img src="images/lambda.png" height="20pt"> je <span style="color: #ffa621">součinitel tepelné vodivosti</span>. Jde o experimentálně určenou konstantu, která udává, jak daný materiál vede teplo. Zkus zapátrat na internetu a napiš součinitel tepelné vodivosti pro vybraný materiál: <br> <input type="number" id="lambda"></p>
+<p> <img src="images/lambda.png" height="20pt"> je <span style="color: #ffa621">součinitel tepelné vodivosti</span>. Jde o experimentálně určenou konstantu, která udává, jak daný materiál vede teplo. Zkus zapátrat na internetu a napiš součinitel tepelné vodivosti pro vybraný materiál: <br> <input type="number" id="lambda"> W∙m-1∙K-1</p>
 
-<p><img src="images/obsah.png" height="18pt"> je <span style="color: #ffa621">plocha</span> (obsah) přes kterou může teplo unikat. Zvol si zkušební hodnotu plochy materiálu, který počítáš: <br> <input type="number" id="plocha">m²</p>
+<p><img src="images/obsah.png" height="18pt"> je <span style="color: #ffa621">plocha</span> (obsah) přes kterou může teplo unikat. Zvol si zkušební hodnotu plochy materiálu, který počítáš: <br> <input type="number" id="plocha"> m²</p>
 
-<p><img src="images/deltaT.png" height="16pt"> je <span style="color: #ffa621">rozdíl teplot</span> dvou prostředí, které materiál odděluje. Zvol si tuto hodnotu (ve stupních Celsia nebo Kelvinech): <br> <input type="number" id="deltaT">°C</p>
+<p><img src="images/deltaT.png" height="16pt"> je <span style="color: #ffa621">rozdíl teplot</span> dvou prostředí (T1 - T2), které materiál odděluje. Zvol si tuto hodnotu (ve stupních Celsia nebo Kelvinech): <br> <input type="number" id="deltaT"> °C</p>
 
-<p><img src="images/delka.png" height="18pt"> je <span style="color: #ffa621">tloušťka materiálu</span> oddělující prostředí o různých teplotách. Zvol si také tloušťku materiálu: <br> <input type="number" id="delka">m</p>
+<p><img src="images/delka.png" height="18pt"> je <span style="color: #ffa621">tloušťka materiálu</span> oddělující prostředí o různých teplotách. Zvol si také tloušťku materiálu: <br> <input type="number" id="delka"> m</p>
 
-<p><img src="images/tau.png" height="18pt"> je <span style="color: #ffa621">doba</span>, po kterou materiál vystavujeme rozdílu teplot. Zvol si časový interval v sekundách: <br> <input type="number" id="cas">s</p>
+<p><img src="images/tau.png" height="18pt"> je <span style="color: #ffa621">doba</span>, po kterou materiál vystavujeme rozdílu teplot. Zvol si časový interval v sekundách: <br> <input type="number" id="cas"> s</p>
 
 <br>
 
 <button onclick="vypocet()">VYPOČÍTEJ</button> <br>
 
-<p id="zaver" style="text-align: center";>Teplo, které projde Tvým zvoleným materiálem je <br> Q = <span id="vysledek" style="font-weight: bold;">tvuj_vysledek</span> J.</p> 
+<p id="zaver" style="text-align: center";>Teplo, které projde Tvým zvoleným materiálem je <br> Q = <span id="vysledek" style="font-weight: bold;">tvuj_vysledek</span> kJ.</p> 
 
-<p style="text-align: center;"><b>Teď zkus využít pomoc <a href="index.html">Krutinova automatického počtáře</a> a vypočítej prostup tepla u některých stavebních materiálů.</b></p>
+<p>„Tento výpočet se často využívá ve stavebnictví, například při posuzování energetické náročnosti budovy, je tak velmi technicky významný a určitě se hodí mít o něm povědomí!“</p>
+
+<p style="text-align: center;">Teď zkus využít pomoc <a href="index.html">Krutinova automatického počtáře</a> a vypočítej prostup tepla u některých stavebních materiálů.</p>
+
+<br>
+
+<p style="text-align: right;"><img src="images/weLovePhysics.png" height="42pt"></p>
+
+<hr>
+<p style="font-size: 10pt;">Obrázek jsme si vypůjčili z <a href="https://www.powerwiki.cz/wiki/OOEET_ResenePriklady">powerwiki.cz</a>, jíž za něj děkujeme!</p>
     
 </body>
 </html>
